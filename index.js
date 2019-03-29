@@ -2,7 +2,7 @@
 const asyncAction = async (id) => {
   return new Promise(() => {
     setTimeout(() => {
-      return reject(new Error(`${id} throw from async`));
+      return reject(new Error(`${id} failed`));
     }, Math.ceil(Math.random() * 1000));
   });
 };
