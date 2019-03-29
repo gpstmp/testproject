@@ -1,3 +1,4 @@
+// throw from async action instead of Promise.reject
 const asyncAction = async (id) => {
   return new Promise(() => {
     setTimeout(() => {
@@ -14,4 +15,5 @@ const start = async () => {
   }
 };
 
+console.log('start app');
 start();
