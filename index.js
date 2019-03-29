@@ -1,14 +1,14 @@
 const asyncAction = async (id) => {
   return new Promise(() => {
     setTimeout(() => {
-      throw new Error(`${id} throw from async`);
+      return reject(new Error(`${id} throw from async`));
     }, Math.ceil(Math.random() * 1000));
   });
 };
 
 const start = async () => {
   try {
-    await asyncAction(10);
+    await asyncAction(2);
   } catch (error) {
     console.log('Catch Error: ', error);
   }
